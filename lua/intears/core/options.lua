@@ -1,4 +1,4 @@
-local opt = vim.opt  -- concise
+local opt = vim.opt -- concise
 
 -- line numbers
 opt.relativenumber = true
@@ -18,7 +18,7 @@ opt.ignorecase = true
 opt.smartcase = true
 
 -- cursor line
-opt.cursorline = false
+opt.cursorline = true
 
 -- apperance
 opt.termguicolors = true

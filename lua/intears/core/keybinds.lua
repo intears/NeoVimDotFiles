@@ -7,7 +7,7 @@ local keymap = vim.keymap
 keymap.set("i", "jk", "<esc>") -- back to normal mode
 
 keymap.set("n", "<leader>nh", ":nohl<CR>") -- clear search highlights
-
+keymap.set("n", "<leader>q", ":q<CR>")
 keymap.set("n", "x", "_x") -- delete a char but do not save to register
 keymap.set("n", "<C-w>", ":w<CR>") -- write file
 
@@ -20,14 +20,12 @@ keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
 keymap.set("n", "<leader>se", "<C-w>=") -- make split windows equal width & height
 keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
 
-
 keymap.set("n", "<leader>t", ":tabnew<CR>") -- open new tab
 keymap.set("n", "<leader>x", ":tabclose<CR>") -- close current tab
 keymap.set("n", "<leader>l", ":tabn<CR>") --  go to next tab
 keymap.set("n", "<leader>h", ":tabp<CR>") --  go to previous tab
 
 -- plugin keymaps
-
 
 -- vim maximizer
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")

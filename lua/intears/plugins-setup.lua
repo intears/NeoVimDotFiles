@@ -34,9 +34,9 @@ return packer.startup(function(use)
 	-- lua functions that many plugins use
 	use("nvim-lua/plenary.nvim")
 
-	use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
+	-- use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
 
-	--  use("catppuccin/nvim")	-- colorscheme
+	use("catppuccin/nvim") -- colorscheme
 
 	--tmux and split window naviagation
 	use("christoomey/vim-tmux-navigator")
@@ -104,6 +104,20 @@ return packer.startup(function(use)
 
 	-- keybind help
 	use("folke/which-key.nvim")
+
+	--github copilot
+	use("github/copilot.vim")
+
+	--startup
+	use({
+		"startup-nvim/startup.nvim",
+		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+		config = function()
+			require("startup").setup({ theme = "intears" })
+		end,
+	})
+
+	use("nvim-lua/plenary.nvim")
 
 	if packer_bootstrap then
 		require("packer").sync()

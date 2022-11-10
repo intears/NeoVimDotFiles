@@ -1,6 +1,6 @@
 local setup, nvimtree = pcall(require, "nvim-tree")
 if not setup then
-  return
+	return
 end
 
 -- recommened settings form the nvim tree docs
@@ -8,11 +8,10 @@ vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1
 
 -- change color for arrows in tree to light blue
-vim.cmd([[ highlight NvimTreeIndentMarker guifg=#3FC5FF ]])
-
+vim.cmd([[ highlight NvimTreeIndentMarker guifg=#89b4fa ]])
 
 nvimtree.setup({
- -- change folder arrow icons
+	-- change folder arrow icons
 	renderer = {
 		icons = {
 			glyphs = {
@@ -32,5 +31,5 @@ nvimtree.setup({
 				enable = false,
 			},
 		},
-	}, 
+	},
 })
