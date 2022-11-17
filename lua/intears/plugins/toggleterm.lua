@@ -133,8 +133,8 @@ function _FLOAT_TERM()
 	float_term:toggle()
 end
 
-vim.api.nvim_set_keymap("n", "<m-1>", "<cmd>lua _FLOAT_TERM()<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("i", "<m-1>", "<cmd>lua _FLOAT_TERM()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>tf", "<cmd>lua _FLOAT_TERM()<CR>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("i", "<m-1>", "<cmd>lua _FLOAT_TERM()<CR>", { noremap = true, silent = true })
 
 local vertical_term = Terminal:new({
 	direction = "vertical",
@@ -143,25 +143,25 @@ local vertical_term = Terminal:new({
 		vim.api.nvim_buf_set_keymap(
 			term.bufnr,
 			"n",
-			"<m-2>",
+			"<leader>tf",
 			"<cmd>2ToggleTerm size=60 direction=vertical<cr>",
 			{ noremap = true, silent = true }
 		)
 		vim.api.nvim_buf_set_keymap(
 			term.bufnr,
 			"t",
-			"<m-2>",
+			"<leader>tf",
 			"<cmd>2ToggleTerm size=60 direction=vertical<cr>",
 			{ noremap = true, silent = true }
 		)
 		vim.api.nvim_buf_set_keymap(
 			term.bufnr,
 			"i",
-			"<m-2>",
+			"<leader>tf",
 			"<cmd>2ToggleTerm size=60 direction=vertical<cr>",
 			{ noremap = true, silent = true }
 		)
-		vim.api.nvim_buf_set_keymap(term.bufnr, "", "<m-3>", "<nop>", { noremap = true, silent = true })
+		vim.api.nvim_buf_set_keymap(term.bufnr, "", "<leader>tf", "<nop>", { noremap = true, silent = true })
 	end,
 	count = 2,
 })
@@ -208,4 +208,4 @@ function _HORIZONTAL_TERM()
 end
 
 vim.api.nvim_set_keymap("n", "<leader>th", "<cmd>lua _HORIZONTAL_TERM()<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("i", "<leader>tv", "<cmd>lua _HORIZONTAL_TERM()<CR>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("i", "<leader>tv", "<cmd>lua _HORIZONTAL_TERM()<CR>", { noremap = true, silent = true })
