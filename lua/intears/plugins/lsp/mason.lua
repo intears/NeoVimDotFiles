@@ -11,31 +11,31 @@ end
 
 local mason_null_ls_status, mason_null_ls = pcall(require, "mason-null-ls")
 if not mason_null_ls_status then
-  return
+	return
 end
-
 
 mason.setup()
 
 mason_lspconfig.setup({
-  ensure_installed = {
-    "csharp_ls",
-    "cssls",
-    "eslint",
-    "html",
-    "jsonls",
-    "quick_lint_js",
-    "tailwindcss",
-    "tsserver",
-    "sumneko_lua",
-  }
+	ensure_installed = {
+		"csharp_ls",
+		"cssls",
+		"eslint",
+		"html",
+		"jsonls",
+		"quick_lint_js",
+		"tailwindcss",
+		"tsserver",
+		"sumneko_lua",
+		"ltex-ls",
+		"marksman",
+	},
 })
 
 mason_null_ls.setup({
-  ensure_installed = {
-    "prettier",
-    "stylua",
-    "eslint_d",
-  }
+	ensure_installed = {
+		"prettier",
+		"stylua",
+		"eslint_d",
+	},
 })
-
