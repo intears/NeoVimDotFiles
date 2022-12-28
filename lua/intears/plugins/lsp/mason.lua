@@ -27,7 +27,6 @@ mason_lspconfig.setup({
 		"tailwindcss",
 		"tsserver",
 		"sumneko_lua",
-		"ltex-ls",
 		"marksman",
 	},
 })
