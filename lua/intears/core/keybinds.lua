@@ -11,6 +11,10 @@ keymap.set("n", "<leader>q", ":q<CR>")
 keymap.set("n", "x", "_x") -- delete a char but do not save to register
 keymap.set("n", "<C-w>", ":w<CR>") -- write file
 
+-- tab in visual mode to indent
+keymap.set("v", "<Tab>", ">gv")
+keymap.set("v", "<S-Tab>", "<gv")
+
 keymap.set("n", "<leader>+", "<C-a>") -- intrement number 1 -> 2
 keymap.set("n", "<leader>-", "<c-X>") -- decrement number 2 <- 1
 

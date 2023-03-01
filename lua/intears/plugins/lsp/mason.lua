@@ -18,15 +18,17 @@ mason.setup()
 
 mason_lspconfig.setup({
 	ensure_installed = {
-		"csharp_ls",
+		-- "csharp_ls",
 		"cssls",
 		"eslint",
+		"lua_ls",
 		"html",
 		"jsonls",
+		"clangd",
 		"quick_lint_js",
 		"tailwindcss",
 		"tsserver",
-		"sumneko_lua",
+		-- "sumneko_lua",
 		"marksman",
 	},
 })

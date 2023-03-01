@@ -44,21 +44,25 @@ local on_attach = function(client, bufnr)
 	end
 end
 
-
 -- used to enable autocompletion (assign to every lsp server config)
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
-
 lspconfig["html"].setup({
-  capabilities = capabilities,
-  on_attach    = on_attach
+	capabilities = capabilities,
+	on_attach = on_attach,
 })
 
 typescript.setup({
-  server = {
-    capabilities = capabilities,
-    on_attach    = on_attach,
-  }
+	server = {
+		capabilities = capabilities,
+		on_attach = on_attach,
+	},
+})
+
+-- configure clangd server for c/c++
+lspconfig["clangd"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
 })
 
 -- configure css server
@@ -74,7 +78,7 @@ lspconfig["tailwindcss"].setup({
 })
 
 -- configure lua server (with special settings)
-lspconfig["sumneko_lua"].setup({
+lspconfig["lua_ls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 	settings = { -- custom settings for lua
